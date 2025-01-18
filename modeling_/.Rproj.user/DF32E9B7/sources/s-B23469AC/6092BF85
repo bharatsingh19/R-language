@@ -1,0 +1,27 @@
+{
+    "id": "6092BF85",
+    "path": "~/Desktop/Rlang/modeling_/titanic_model.R",
+    "project_path": "titanic_model.R",
+    "type": "r_source",
+    "hash": "2883918138",
+    "contents": "",
+    "dirty": false,
+    "created": 1711993530152.0,
+    "source_on_save": false,
+    "relative_order": 11,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "28,0",
+        "scrollLine": "3"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1712257419,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1712257419719,
+    "read_only": false,
+    "read_only_alternatives": []
+}

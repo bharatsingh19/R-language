@@ -1,0 +1,21 @@
+low=c(40,50,60,70,80,90,100)
+high=c(50,60,70,80,90,100,110)
+x<-(low+high)/2
+x
+f<-c(10,15,18,20,16,14,9)
+mean<-sum(f*x)/sum(f)
+mean
+df2<-rep(x,f)
+df2
+median(df2)
+mode(df2)
+max(f)
+mode=3*median(df2)-2*mean(df2)
+mode
+mean(df2)
+q3=quantile(df2,probs = c(0.75))
+p58=quantile(df2,probs = c(0.58))
+d6=quantile(df2,probs = c(0.60))
+q3
+p58
+d6

@@ -1,0 +1,10 @@
+data("treering")
+t<-treering
+length(t)
+t
+r<-sort(t)
+tail(r,3)
+t1.8<-t[t>1.8]
+t1.8
+rm(t.18)
+getwd()

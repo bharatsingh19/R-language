@@ -1,0 +1,24 @@
+data2<-data.frame(
+    Rent=c(3500,3000,4500),
+    Food=c(5200,4800,3600),
+    Entertainment=c(2500,3200,2800),
+    Transport=c(1200,1800,1500),
+    others=c(2000,2500,1800),
+    col.names=c("Rent","Food","Entertainment","Transport","Others"),
+    row.names=c("A","B","C")
+  )
+data1 <- structure(
+  list(
+    Rent = c(3500, 3000, 4500),
+    Food = c(5200, 4800, 3600),
+    Entertainment = c(2500, 3200, 2800),
+    Transport = c(1200, 1800, 1500),
+    Others = c(2000, 2500, 1800)
+  ),
+    col.names = c("Rent", "Food", "Entertainment", "Transport", "Others"),
+    class="data.frame",
+    row.names = c("A", "B", "C")
+  )
+
+data1<-data.frame(data1)
+print(data1)

@@ -1,0 +1,18 @@
+set.seed(123)
+data=runif(n=1000,min = 1.2,max = 6)
+data
+mean(data)
+sd=sd(data)
+hist(data,main="histogram of population",
+     xlab = "data")
+sample50<-c()
+n=1000
+for(i in 1:50){
+  sample50[i] = mean(sample(data,50,replace = TRUE))
+}
+hist(sample50,main = "histogram of sample",
+     xlab = "sample50")
+mean(sample50)
+sd(sample50)
+sample50sd=sd/sqrt(50)
+sample50sd

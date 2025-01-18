@@ -1,0 +1,12 @@
+data("islands")
+i=islands
+s=sort(i)
+h=head(s)
+h
+t=tail(s)
+t
+pet=c(3,4,5,6,7,8,9,10)
+flo=c(55,93,113,90,85,73,29,5)
+flower=data.frame(pet,flo)
+cf=cumsum(flo)
+cf

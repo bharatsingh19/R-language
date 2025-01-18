@@ -1,0 +1,27 @@
+{
+    "id": "B1CAE38A",
+    "path": "~/Desktop/Rlang/experiment3/messages_rec.R",
+    "project_path": "messages_rec.R",
+    "type": "r_source",
+    "hash": "2481623263",
+    "contents": "",
+    "dirty": false,
+    "created": 1707632753195.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "38,32",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1707646608,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1707646608854,
+    "read_only": false,
+    "read_only_alternatives": []
+}

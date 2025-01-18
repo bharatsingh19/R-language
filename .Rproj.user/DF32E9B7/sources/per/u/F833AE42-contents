@@ -1,0 +1,8 @@
+data("anscombe")
+d<-anscombe
+attach(d)
+x2
+y2
+d2<-data.frame(x2,y2)
+d2
+plot(x2,y2,main="scatter plot by 231BCADA32")

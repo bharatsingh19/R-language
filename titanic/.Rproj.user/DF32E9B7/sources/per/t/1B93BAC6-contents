@@ -1,0 +1,64 @@
+getwd()
+setwd("C:/Users/Anitha Pai/OneDrive/Desktop/data science lab")
+lungcancer=read.csv("cancer patient data sets.csv")
+a1=chisq.test(lungcancer$Age,lungcancer$Level) 
+a1
+a2=chisq.test(lungcancer$Gender,lungcancer$Level) 
+a2
+a3=chisq.test(lungcancer$Air.Pollution,lungcancer$Level) 
+a3
+a4=chisq.test(lungcancer$Alcohol.use,lungcancer$Level) 
+a4
+a5=chisq.test(lungcancer$Dust.Allergy,lungcancer$Level) #-10.01977
+a5
+a6=chisq.test(lungcancer$OccuPational.Hazards,lungcancer$Level) #-10.01977
+a6
+a7=chisq.test(lungcancer$Genetic.Risk,lungcancer$Level) #-10.01977
+a7
+a8=chisq.test(lungcancer$chronic.Lung.Disease,lungcancer$Level) #-10.01977
+a8
+a9=chisq.test(lungcancer$Balanced.Diet,lungcancer$Level) #-10.01977
+a9
+a10=chisq.test(lungcancer$Obesity,lungcancer$Level) #-10.01977
+a10
+a11=chisq.test(lungcancer$Smoking,lungcancer$Level) #-10.01977
+a11
+a12=chisq.test(lungcancer$Passive.Smoker,lungcancer$Level) #-10.01977
+a12
+a13=chisq.test(lungcancer$Chest.Pain,lungcancer$Level) #-10.01977
+a13
+a14=chisq.test(lungcancer$Coughing.of.Blood,lungcancer$Level) #-10.01977
+a14
+a15=chisq.test(lungcancer$Fatigue,lungcancer$Level)#-10.01977
+a15
+a16=chisq.test(lungcancer$Weight.Loss,lungcancer$Level) #-10.01977
+a16
+a17=chisq.test(lungcancer$Shortness.of.Breath,lungcancer$Level) #-10.01977
+a17
+a18=chisq.test(lungcancer$Wheezing,lungcancer$Level) #-10.01977
+a18
+a19=chisq.test(lungcancer$Swallowing.Difficulty,lungcancer$Level) #-10.01977
+a19
+a20=chisq.test(lungcancer$Clubbing.of.Finger.Nails,lungcancer$Level) #-10.01977
+a20
+a21=chisq.test(lungcancer$Frequent.Cold,lungcancer$Level)#-10.01977
+a21
+a22=chisq.test(lungcancer$Dry.Cough,lungcancer$Level) #-10.01977
+a22
+a23=chisq.test(lungcancer$Snoring,lungcancer$Level) #-10.01977
+a23
+lungcancer=lungcancer[-c(1,2)]
+library(caTools)
+sample=sample.split(lungcancer,SplitRatio = 0.80)
+trainingset=subset(lungcancer,sample==TRUE)
+testset=subset(lungcancer,sample==FALSE)
+dim(trainingset)
+dim(testset)
+set.seed(1)
+library(naivebayes)
+classifier_naive=naive_bayes(Level~.,data=trainingset)
+classifier_naive
+summary(classifier_naive)
+testset$y_pred=predict(classifier_naive,newdata=testset)
+con_mat=table(testset$Level,y_pred)
+print(con_mat)

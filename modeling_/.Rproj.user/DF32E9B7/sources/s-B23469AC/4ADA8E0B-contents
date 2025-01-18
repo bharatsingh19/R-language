@@ -1,0 +1,27 @@
+getwd()
+titanic=read.csv("titanic.csv",na.strings = "")
+titanic=titanic[-c(1,3,4,9,11)]
+table(titanic$Survived)
+table(titanic$Sex)
+table(titanic$Embarked)
+titanic$Age[is.na(titanic$Age)]=mean(titanic$Age,na.rm = TRUE)
+titanic$Embarked[is.na(titanic$Embarked)]="S"
+sum(is.na(titanic$Survived))
+library(caTools)
+sample=sample.split(titanic$Survived,SplitRatio = 0.80)
+unique(titanic$Sex)
+trainingset=subset(titanic,sample==TRUE)
+testset=subset(titanic,sample==FALSE)
+
+install.packages("randomForest")
+library(randomForest)
+
+model <- randomForest(Survived ~ ., data = trainingset, na.action = na.exclude)
+unique(titanic$Survived)
+summary(model)
+View(model)
+testset$prediction=predict(model,testset)
+View(testset)
+testset$binary=ifelse(testset$prediction>0.5,1,0)
+cor(testset$Survived,testset$binary)
+table(testset$Survived,testset$binary)

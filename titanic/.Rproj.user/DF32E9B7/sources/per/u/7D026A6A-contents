@@ -1,0 +1,26 @@
+getwd()
+titanic<-read.csv("titanic.csv")
+View(titanic)
+chisq.test(titanic$Survived,titanic$Age)
+annova_test=aov(Survived~(Age),data = titanic)
+View(annova_test)
+summary(annova_test)
+summary(titanic)
+table<-data.frame(titanic$Survived,titanic$Age)
+plot(table,
+     xlab = "1-survived::0-dead",
+     ylab = "age"
+     )
+dead<-data.frame(titanic[titanic$Survived == 0])
+dead <- titanic[titanic$Survived == 0, ]
+survived <- titanic[titanic$Survived == 1, ]
+nrow(dead)
+nrow(survived)
+plot(dead$Age,
+     xlab = "no. of death",
+     ylab = "age"
+     )
+nrow(dead[dead$Age>20 & dead$Age<40, ])
+350/549*100
+nrow(dead[dead$Age<20 , ])
+nrow(dead[dead$Age>40 , ])
